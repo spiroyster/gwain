@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{fcdab2a5-5d41-4968-bc7f-5c57ddf97720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\platform">
+      <UniqueIdentifier>{a652860c-09aa-4fb4-babc-1c86149eeb17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\artist">
+      <UniqueIdentifier>{09af1940-5962-4254-89ff-cbf8e721a9d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\control">
+      <UniqueIdentifier>{8b5dd8c1-7f88-40e9-9b11-8385c9fe58fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\core\action.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\appearance.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\control.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\dim.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\eos.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\event.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\font.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\image.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\instance.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\texture.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\theme.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\tip.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\types.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\view.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\platform\gl4.hpp">
+      <Filter>Header Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\platform\interrogator.hpp">
+      <Filter>Header Files\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\border.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\caption.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\checker.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\fillet.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\filter.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\mix.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\paint.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\palette.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\text.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\tip.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\artist\transform.hpp">
+      <Filter>Header Files\artist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\button.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\combo_list.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\controls.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\label.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\list.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\radio_list.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\slider.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\text_edit.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\controls\zone.hpp">
+      <Filter>Header Files\control</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\error.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\gwain.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\display.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\core\interrogator.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
