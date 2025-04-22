@@ -21,7 +21,7 @@
 namespace gwain
 {
 	class gl4 : 
-		public core::display_adaptor,
+		public core::instance_interface::display_adaptor,
 		public eos_observer::texture_registered,
 		public eos_observer::texture_unregistered,
 		public eos_observer::texture_image

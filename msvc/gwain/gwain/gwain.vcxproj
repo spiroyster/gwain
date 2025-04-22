@@ -151,7 +151,6 @@
     <ClInclude Include="..\..\..\include\core\appearance.hpp" />
     <ClInclude Include="..\..\..\include\core\control.hpp" />
     <ClInclude Include="..\..\..\include\core\dim.hpp" />
-    <ClInclude Include="..\..\..\include\core\display.hpp" />
     <ClInclude Include="..\..\..\include\core\eos.hpp" />
     <ClInclude Include="..\..\..\include\core\error.hpp" />
     <ClInclude Include="..\..\..\include\core\event.hpp" />

@@ -9,28 +9,28 @@ GWAIN_DISPLAY(gwain::gl4)
 #include "..\include\controls\label.hpp"
 
 
-class myButton : public gwain::controls::button
-{
-	gwain::controls::label label_;
-public:
-	myButton(const gwain::control_id& name, const std::wstring& text)
-		:	gwain::controls::button(name),
-			label_(name + "_label", text)
-	{
-	}
-
-	myButton(const gwain::control_id& name, const std::wstring& text, gwain::controls::button::OnClickCallback callback)
-		:	gwain::controls::button(name, callback),
-			label_(name + "_label", text)
-	{
-	}
-
-	void layout()
-	{
-		// Centre the label wrt to the button...
-		label_.control_region(gwain::dim_centred(label_.)
-	}
-};
+//class myButton : public gwain::controls::button
+//{
+//	gwain::controls::label label_;
+//public:
+//	myButton(const gwain::control_id& name, const std::wstring& text)
+//		:	gwain::controls::button(name),
+//			label_(name + "_label", text)
+//	{
+//	}
+//
+//	myButton(const gwain::control_id& name, const std::wstring& text, gwain::controls::button::OnClickCallback callback)
+//		:	gwain::controls::button(name, callback),
+//			label_(name + "_label", text)
+//	{
+//	}
+//
+//	void layout()
+//	{
+//		// Centre the label wrt to the button...
+//		//label_.control_region(gwain::dim_centred(label_.)
+//	}
+//};
 
 
 
@@ -39,7 +39,7 @@ int main(int argc, char** argv)
 	try
 	{
 		// Inialise gwain (use OpenGL4... and default interrogator and default theme)...
-		gwain::init<gwain::gl4>();
+		gwain::init();
 
 		// Create some buttons...
 		myButton button1("Button1", L"ClickMe1");

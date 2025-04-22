@@ -12,6 +12,10 @@ namespace gwain
 	typedef float f;
 	typedef unsigned char uc;
 	
+	// Coordinate (view)...
+	struct coord { i x_, y_; };
+	struct fcoord { f x_, y_; };
+
 	// ID's
 	typedef std::string event_id;
 	typedef std::string control_id;
@@ -39,8 +43,6 @@ namespace gwain
 	constexpr gwain::mouse_button_id GWAIN_MOUSE_LEFT = 1;
 	constexpr gwain::mouse_button_id GWAIN_MOUSE_RIGHT = 2;
 	constexpr gwain::mouse_button_id GWAIN_MOUSE_MIDDLE = 3;
-
-
 
 }
 

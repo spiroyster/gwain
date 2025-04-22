@@ -39,6 +39,12 @@ namespace gwain
 				virtual std::pair<view*, control*> interrogate(const coord& display_coordinate, const std::vector<view*>& views) = 0;
 			};
 
+			class theme_adaptor
+			{
+			public:
+				virtual std::shared_ptr<texture> refresh(control* c, control* p = nullptr) = 0;
+			};
+
 			instance_interface(std::shared_ptr<display_adaptor> display, std::shared_ptr<interrogation_adaptor> interrogator)
 				: display_adaptor_(display), interrogation_adaptor_(interrogator)
 			{
@@ -236,117 +242,11 @@ namespace gwain
 
 	}
 
-	extern core::instance_interface& instance();
+	static core::instance_interface& instance();
 
-
-	namespace core
-	{
-		class default_interrogation : public instance_interface::interrogation_adaptor
-		{
-			control* interrogate_scene(const coord& display_coordinate, const std::list<const control*>& view_controls)
-			{
-				for (auto sc = view_controls.rbegin(); sc != view_controls.rend(); ++sc)
-				{
-					if (dim_contained((*sc)->control_region(), (*sc)->control_mask(), display_coordinate))
-						return const_cast<control*>(*sc);
-				}
-				return nullptr;
-			}
-
-		public:
-			std::pair<view*, control*> interrogate(const coord& display_coordinate, const std::vector<view*>& views)
-			{
-				// first check the back view (top view)...
-				for (auto vItr = views.rbegin(); vItr != views.rend(); ++vItr)
-				{
-
-					/*for (auto sItr = (*vItr)->view().begin(); sItr != (*vItr)->view_scenes().end(); ++sItr)
-					{
-						if (auto ctl = interrogate_scene(display_coordinate, instance().scene_controls(*sItr)))
-							return { *vItr, ctl };
-					}*/
-				}
-				return { nullptr, nullptr };
-			}
-			void interrogation_adaptor_free() {}
-		};
-
-		class default_theme : public theme
-		{
-			// default label font...
-			std::shared_ptr<font> default_font_;
-
-			// default background colour...
-			std::shared_ptr<texture> default_background_;
-
-		public:
-			default_theme()
-				: default_background_(std::make_shared<texture>("default_theme_background", rgba32(255, 0, 0, 255)))
-			{
-				// load the default font...
-				try
-				{
-					default_font_ = std::make_shared<font>(ttf_font("default.ttf", 24));
-				}
-				catch (const exception& e)
-				{
-					eos_dispatch::exception_thrown(e);
-				}
-
-				if (!default_font_)
-					default_font_ = std::make_shared<font>(24, 24);
-			}
-
-			std::shared_ptr<texture> refresh(control* c, control* p = nullptr)
-			{
-				//if (auto clabel = dynamic_cast<label*>)
-
-				return default_background_;
-			}
-		};
-
-	}	// namespace core
-
-	//void init()
-	//{
-	//	//instance();
-	//	instance().default_interrogator(std::make_shared<core::default_interrogation>());
-	//	instance().default_theme(std::make_shared<core::default_theme>());
-	//}
-
-	//template <class theme_class>
-	//void init()
-	//{
-	//	//instance();
-	//	instance().default_interrogator(std::make_shared<core::default_interrogation>());
-	//	instance().default_theme(std::make_shared<theme_class>());
-	//}
-
-	//template <class theme_class, class interrogator_class>
-	//void init()
-	//{
-	//	instance();
-	//	instance().default_interrogator(std::make_shared<interrogator_class>());
-	//	instance().default_theme(std::make_shared<theme_class>());
-	//}
 }
 
-//#define GWAIN_DISPLAY(display) EOS_INIT \
-//namespace gwain\
-//{\
-//	namespace core\
-//	{\
-//		static std::unique_ptr<instance_interface> instance_; \
-//	}\
-//	core::instance_interface& instance()\
-//	{\
-//		if (!core::instance_) \
-//			core::instance_ = std::make_unique<core::instance_interface>(std::make_shared<display>()); \
-//		return *core::instance_; \
-//	}\
-//}
-
-#define GWAIN_INSTANCE EOS_INIT \
+#define GWAIN_DISPLAY(display) EOS_INIT \
 namespace gwain\
 {\
 	namespace core\
@@ -360,6 +260,5 @@ namespace gwain\
 		return *core::instance_; \
 	}\
 }
-
 
 #endif // GWAIN_INSTANCE_HPP

@@ -141,9 +141,6 @@
     <ClInclude Include="..\..\..\include\gwain.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\core\display.hpp">
-      <Filter>Header Files\core</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\include\core\interrogator.hpp">
       <Filter>Header Files\core</Filter>
     </ClInclude>
